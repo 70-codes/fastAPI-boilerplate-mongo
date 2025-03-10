@@ -1,0 +1,396 @@
+[
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "fix_id",
+        "importPath": "repository",
+        "description": "repository",
+        "isExtraImport": true,
+        "detail": "repository",
+        "documentation": {}
+    },
+    {
+        "label": "fix_one_item_id",
+        "importPath": "repository",
+        "description": "repository",
+        "isExtraImport": true,
+        "detail": "repository",
+        "documentation": {}
+    },
+    {
+        "label": "Hash",
+        "importPath": "security.hash",
+        "description": "security.hash",
+        "isExtraImport": true,
+        "detail": "security.hash",
+        "documentation": {}
+    },
+    {
+        "label": "Hash",
+        "importPath": "security.hash",
+        "description": "security.hash",
+        "isExtraImport": true,
+        "detail": "security.hash",
+        "documentation": {}
+    },
+    {
+        "label": "Hash",
+        "importPath": "security.hash",
+        "description": "security.hash",
+        "isExtraImport": true,
+        "detail": "security.hash",
+        "documentation": {}
+    },
+    {
+        "label": "AuthJWT",
+        "importPath": "async_fastapi_jwt_auth",
+        "description": "async_fastapi_jwt_auth",
+        "isExtraImport": true,
+        "detail": "async_fastapi_jwt_auth",
+        "documentation": {}
+    },
+    {
+        "label": "AuthJWTBearer",
+        "importPath": "async_fastapi_jwt_auth.auth_jwt",
+        "description": "async_fastapi_jwt_auth.auth_jwt",
+        "isExtraImport": true,
+        "detail": "async_fastapi_jwt_auth.auth_jwt",
+        "documentation": {}
+    },
+    {
+        "label": "get_database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "UserLogin",
+        "importPath": "models.auth",
+        "description": "models.auth",
+        "isExtraImport": true,
+        "detail": "models.auth",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "create_user_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_users_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_by_id_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "update_user_repo",
+        "importPath": "repository.user",
+        "description": "repository.user",
+        "isExtraImport": true,
+        "detail": "repository.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserShow",
+        "importPath": "schemas.user",
+        "description": "schemas.user",
+        "isExtraImport": true,
+        "detail": "schemas.user",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "isExtraImport": true,
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "isExtraImport": true,
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserLogin",
+        "kind": 6,
+        "importPath": "models.auth",
+        "description": "models.auth",
+        "peekOfCode": "class UserLogin(BaseModel):\n    \"\"\"_summary_\n    Args:\n        BaseModel (_type_): _description_\n    \"\"\" \"\"\"_summary_\n    Args:\n        BaseModel (_type_): _description_\n    \"\"\"\n    email: str\n    password: str",
+        "detail": "models.auth",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "models.user",
+        "description": "models.user",
+        "peekOfCode": "class User(BaseModel):\n    \"\"\"\n    User model for creating a user in the system.\n    Used in the request body.\n    Attributes:\n        f_name (str): The first name of the user.\n        l_name (str): The last name of the user.\n        username (str): The username of the user.\n        email (str): The email address of the user.\n        password (str): The password of the user.",
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 5,
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "peekOfCode": "auth = create_router(tags=\"Auth\", prefix=\"auth\")\nauth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def method_name():\n    pass\n@auth.post(\"/refresh-token\")\nasync def refresh_token():\n    pass",
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth_dep",
+        "kind": 5,
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "peekOfCode": "auth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def method_name():\n    pass\n@auth.post(\"/refresh-token\")\nasync def refresh_token():\n    pass",
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 5,
+        "importPath": "routes.user",
+        "description": "routes.user",
+        "peekOfCode": "user = create_router(tags=\"User\", prefix=\"user\")\n@user.post(\"/create\")\nasync def create_user(user: User, db=Depends(get_database)):\n    \"\"\"Create a new user in the system.\n    Args:\n        user (User): The data for the new user.\n        db: The database connection.\n    Returns:\n        The newly created user as a dictionary.\n    \"\"\"",
+        "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserShow",
+        "kind": 6,
+        "importPath": "schemas.user",
+        "description": "schemas.user",
+        "peekOfCode": "class UserShow(BaseModel):\n    \"\"\"_summary_\n    Args:\n        BaseModel (_type_): _description_\n    \"\"\"\n    id: str\n    f_name: str\n    l_name: str\n    password: str\n    username: str",
+        "detail": "schemas.user",
+        "documentation": {}
+    },
+    {
+        "label": "Hash",
+        "kind": 6,
+        "importPath": "security.hash",
+        "description": "security.hash",
+        "peekOfCode": "class Hash:\n    \"\"\"Utility class for password hashing and verification using bcrypt.\"\"\"\n    @staticmethod\n    def verify_password(plain_password: str, hashed_password: str) -> bool:\n        \"\"\"\n        Verify a plain text password against its hashed version.\n        Args:\n            plain_password (str): The plain text password to verify.\n            hashed_password (str): The hashed password to compare against.\n        Returns:",
+        "detail": "security.hash",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "security.hash",
+        "description": "security.hash",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nclass Hash:\n    \"\"\"Utility class for password hashing and verification using bcrypt.\"\"\"\n    @staticmethod\n    def verify_password(plain_password: str, hashed_password: str) -> bool:\n        \"\"\"\n        Verify a plain text password against its hashed version.\n        Args:\n            plain_password (str): The plain text password to verify.\n            hashed_password (str): The hashed password to compare against.",
+        "detail": "security.hash",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\norigins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n@app.get(\"/\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "origins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n@app.get(\"/\")\nasync def root():",
+        "detail": "main",
+        "documentation": {}
+    }
+]
