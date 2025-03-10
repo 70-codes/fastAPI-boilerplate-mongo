@@ -1,0 +1,1 @@
+# fastAPI-boilerplate-mongo
