@@ -1,5 +1,5 @@
-from bson import ObjectId
-from fastapi import Depends, HTTPException, status
+from async_fastapi_jwt_auth import AuthJWT
+from fastapi import Depends
 
 from database import get_database
 from models.user import User
@@ -11,8 +11,8 @@ from repository.user import (
     reset_password_repo,
     update_user_repo,
 )
+from routes.auth import auth, auth_dep
 from schemas.user import UserShow
-from security.hash import Hash
 
 from . import create_router
 
@@ -30,11 +30,14 @@ async def create_user(user: User, db=Depends(get_database)):
     Returns:
         The newly created user as a dictionary.
     """
+
     return await create_user_repo(user=user, db=db)
 
 
 @user.get("/all", response_model=list[UserShow])
-async def get_all_users(db=Depends(get_database)):
+async def get_all_users(
+    authorize: AuthJWT = Depends(auth_dep), db=Depends(get_database)
+):
     """_summary_
 
     Args:
@@ -43,21 +46,31 @@ async def get_all_users(db=Depends(get_database)):
     Returns:
         _type_: _description_
     """
+    await authorize.jwt_required()
     return await get_all_users_repo(db=db)
 
 
 @user.get("/get/{id}", response_model=UserShow)
-async def get_user_by_id(user_id: str, db=Depends(get_database)):
+async def get_user_by_id(
+    user_id: str,
+    authorize: AuthJWT = Depends(auth_dep),
+    db=Depends(get_database),
+):
     """_summary_
 
     Args:
         db (_type_, optional): _description_. Defaults to Depends(get_database()).
     """
+    await authorize.jwt_required()
     return await get_user_by_id_repo(id=user_id, db=db)
 
 
 @user.delete("/delete/{id}")
-async def delete_user(id: str, db=Depends(get_database)):
+async def delete_user(
+    id: str,
+    authorize: AuthJWT = Depends(auth_dep),
+    db=Depends(get_database),
+):
     """_summary_
 
     Args:
@@ -70,11 +83,17 @@ async def delete_user(id: str, db=Depends(get_database)):
     Returns:
         _type_: _description_
     """
+    await authorize.jwt_required()
     return await delete_user_repo(id=id, db=db)
 
 
 @user.patch("/update/{id}", response_model=dict)
-async def update_user(id: str, user: User, db=Depends(get_database)):
+async def update_user(
+    id: str,
+    user: User,
+    authorize: AuthJWT = Depends(auth_dep),
+    db=Depends(get_database),
+):
     """Update a user with partial data
 
     Only updates fields that are provided in the request body.
@@ -91,9 +110,16 @@ async def update_user(id: str, user: User, db=Depends(get_database)):
     Returns:
         dict: Success message
     """
+    await authorize.jwt_required()
     return await update_user_repo(id=id, user=user, db=db)
 
 
 @user.patch("/reset-password/{id}", response_model=dict)
-async def method_name(id: str, password: str, db=Depends(get_database)):
+async def method_name(
+    id: str,
+    password: str,
+    authorize: AuthJWT = Depends(auth_dep),
+    db=Depends(get_database),
+):
+    await authorize.jwt_required()
     return await reset_password_repo(id=id, password=password, db=db)

@@ -1,13 +1,21 @@
 #!/home/creed347/anaconda3/envs/fastAPI/bin/python
 
 
+from async_fastapi_jwt_auth import AuthJWT
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routes.auth import auth
 from routes.user import user
+from schemas.auth import Settings
 
 app = FastAPI()
+
+
+@AuthJWT.load_config
+def get_config():
+    return Settings()
+
 
 origins = ["*"]
 

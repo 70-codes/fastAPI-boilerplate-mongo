@@ -24,11 +24,11 @@
         "documentation": {}
     },
     {
-        "label": "ObjectId",
-        "importPath": "bson",
-        "description": "bson",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "bson",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -89,22 +89,6 @@
     },
     {
         "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -152,11 +136,27 @@
         "documentation": {}
     },
     {
-        "label": "Hash",
-        "importPath": "security.hash",
-        "description": "security.hash",
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "detail": "security.hash",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "AuthJWT",
+        "importPath": "async_fastapi_jwt_auth",
+        "description": "async_fastapi_jwt_auth",
+        "isExtraImport": true,
+        "detail": "async_fastapi_jwt_auth",
+        "documentation": {}
+    },
+    {
+        "label": "AuthJWT",
+        "importPath": "async_fastapi_jwt_auth",
+        "description": "async_fastapi_jwt_auth",
+        "isExtraImport": true,
+        "detail": "async_fastapi_jwt_auth",
         "documentation": {}
     },
     {
@@ -200,19 +200,11 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
+        "label": "get_user_by_email",
+        "importPath": "repository.user",
+        "description": "repository.user",
         "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
+        "detail": "repository.user",
         "documentation": {}
     },
     {
@@ -264,6 +256,38 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "isExtraImport": true,
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth_dep",
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "isExtraImport": true,
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routes.auth",
+        "description": "routes.auth",
+        "isExtraImport": true,
+        "detail": "routes.auth",
+        "documentation": {}
+    },
+    {
         "label": "UserShow",
         "importPath": "schemas.user",
         "description": "schemas.user",
@@ -288,19 +312,19 @@
         "documentation": {}
     },
     {
-        "label": "auth",
-        "importPath": "routes.auth",
-        "description": "routes.auth",
-        "isExtraImport": true,
-        "detail": "routes.auth",
-        "documentation": {}
-    },
-    {
         "label": "user",
         "importPath": "routes.user",
         "description": "routes.user",
         "isExtraImport": true,
         "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "schemas.auth",
+        "description": "schemas.auth",
+        "isExtraImport": true,
+        "detail": "schemas.auth",
         "documentation": {}
     },
     {
@@ -326,7 +350,7 @@
         "kind": 5,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "auth = create_router(tags=\"Auth\", prefix=\"auth\")\nauth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def method_name():\n    pass\n@auth.post(\"/refresh-token\")\nasync def refresh_token():\n    pass",
+        "peekOfCode": "auth = create_router(tags=\"Auth\", prefix=\"auth\")\nauth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def login(\n    request: UserLogin,\n    auth: AuthJWT = Depends(),\n    db=Depends(get_database),\n):\n    \"\"\"_summary_\n    Args:",
         "detail": "routes.auth",
         "documentation": {}
     },
@@ -335,7 +359,7 @@
         "kind": 5,
         "importPath": "routes.auth",
         "description": "routes.auth",
-        "peekOfCode": "auth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def method_name():\n    pass\n@auth.post(\"/refresh-token\")\nasync def refresh_token():\n    pass",
+        "peekOfCode": "auth_dep = AuthJWTBearer()\n@auth.post(\"/login\")\nasync def login(\n    request: UserLogin,\n    auth: AuthJWT = Depends(),\n    db=Depends(get_database),\n):\n    \"\"\"_summary_\n    Args:\n        request (UserLogin): email and password",
         "detail": "routes.auth",
         "documentation": {}
     },
@@ -346,6 +370,24 @@
         "description": "routes.user",
         "peekOfCode": "user = create_router(tags=\"User\", prefix=\"user\")\n@user.post(\"/create\")\nasync def create_user(user: User, db=Depends(get_database)):\n    \"\"\"Create a new user in the system.\n    Args:\n        user (User): The data for the new user.\n        db: The database connection.\n    Returns:\n        The newly created user as a dictionary.\n    \"\"\"",
         "detail": "routes.user",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "schemas.auth",
+        "description": "schemas.auth",
+        "peekOfCode": "class Settings(BaseModel):\n    authjwt_secret_key: str = (\n        \"2a3beb29fcb98dfc1a92016470b4566dcc470073855672b0c2f44831d148aa37\"\n    )\nclass Token(BaseModel):\n    access_token: str\n    access_token_expiration_time: int\n    refresh_token: str\n    class Config:\n        from_atttributes = True",
+        "detail": "schemas.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "kind": 6,
+        "importPath": "schemas.auth",
+        "description": "schemas.auth",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    access_token_expiration_time: int\n    refresh_token: str\n    class Config:\n        from_atttributes = True",
+        "detail": "schemas.auth",
         "documentation": {}
     },
     {
@@ -376,11 +418,20 @@
         "documentation": {}
     },
     {
+        "label": "get_config",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_config():\n    return Settings()\norigins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\norigins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n@app.get(\"/\")",
+        "peekOfCode": "app = FastAPI()\n@AuthJWT.load_config\ndef get_config():\n    return Settings()\norigins = [\"*\"]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,\n    allow_credentials=True,\n    allow_methods=[\"*\"],",
         "detail": "main",
         "documentation": {}
     },
